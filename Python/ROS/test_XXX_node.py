@@ -16,7 +16,7 @@ class TestXXXNode(unittest.TestCase):
 
         self.lock = threading.RLock()
 
-        rospy.init_node("roboclaw_test", log_level=rospy.DEBUG)
+        rospy.init_node("XXX_test", log_level=rospy.DEBUG)
         rospy.Subscriber("/XXX/XXX", XXX_msg, self._XXX_callback)
         self.pub_XXX = rospy.Publisher(
             '/XXX/XXX', XXX_msg, queue_size=1
