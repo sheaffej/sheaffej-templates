@@ -9,8 +9,11 @@ NAME = 'XXX_unittest'
 
 class TestXXX(unittest.TestCase):
 
-    def __init__(self, *args):
-        super(TestXXX, self).__init__(*args)
+    def setUp(self):
+        print()
+
+    def tearDown(self):
+        pass
 
     def test_dummy(self):
         # (x, y, expected)

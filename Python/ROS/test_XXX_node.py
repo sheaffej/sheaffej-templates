@@ -11,9 +11,8 @@ NAME = 'XXX_node_test'
 
 class TestXXXNode(unittest.TestCase):
 
-    def __init__(self, *args):
-        super(TestXXXNode, self).__init__(*args)
-
+    def setUp(self):
+        print()
         self.lock = threading.RLock()
 
         rospy.init_node("XXX_test", log_level=rospy.DEBUG)
@@ -22,6 +21,9 @@ class TestXXXNode(unittest.TestCase):
             '/XXX/XXX', XXX_msg, queue_size=1
         )
         rospy.sleep(1)  # Let subscribers connect
+
+    def tearDown(self):
+        pass
 
     def test_dummy(self):
         self.assertTrue(True)
